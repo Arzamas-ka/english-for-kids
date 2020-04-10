@@ -500,10 +500,12 @@ export const dataCarts = [
 ];
 
 export const dataSets = [
-  { set: 'Actions', id: 0 },
-  { set: 'Action', id: 1 },
-  { set: 'Animal', id: 2 },
-  { set: 'Animal', id: 3 },
-  { set: 'Clothes', id: 4 },
-  { set: 'Emotions', id: 5 },
+  { set: 'Weather', id: 0 },
+  { set: 'Vegetables', id: 1 },
+  { set: 'Animals', id: 2 },
+  { set: 'Trees', id: 3 },
+  { set: 'Birds', id: 4 },
+  { set: 'Flowers', id: 5 },
+  { set: 'Fishes', id: 6 },
+  { set: 'Family', id: 7 },
 ];

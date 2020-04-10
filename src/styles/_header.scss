@@ -1,0 +1,110 @@
+@import './variables';
+
+// Header
+.header {
+  background-color: $secondary;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Menu
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 320px;
+  height: 100vw;
+
+  background-color: $primary;
+  transition: transform .7s ease-out;
+  z-index: 10;
+  transform: translateX(-100%);
+
+  &--open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__button-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+
+    border: 0;
+    background-color: transparent;
+    color: $white;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+    outline: none;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 60px 40px;
+  }
+
+  &-item {
+    padding: 10px 0;
+  }
+
+  &-link {
+    font-size: 20px;
+    color: $white;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}
+
+// Burger-menu icon
+.burger-menu {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 40px;
+  height: 100%;
+  padding: 10px 0;
+
+  cursor: pointer;
+
+  & span {
+    display: block;
+
+    width: 80%;
+    height: 3px;
+    margin: 4px 0;
+
+    background-color: white;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
