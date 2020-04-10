@@ -1,3 +1,12 @@
+import weather from '../../assets/images/set_weather.png';
+import vegetables from '../../assets/images/set_vegetables.png';
+import animals from '../../assets/images/set_animals.png';
+import trees from '../../assets/images/set_trees.png';
+import birds from '../../assets/images/set_birds.png';
+import flowers from '../../assets/images/set_flowers.png';
+import fishes from '../../assets/images/set_fishes.png';
+import family from '../../assets/images/set_family.png';
+
 export const dataCarts = [
   [
     {
@@ -500,12 +509,12 @@ export const dataCarts = [
 ];
 
 export const dataSets = [
-  { set: 'Weather', id: 0 },
-  { set: 'Vegetables', id: 1 },
-  { set: 'Animals', id: 2 },
-  { set: 'Trees', id: 3 },
-  { set: 'Birds', id: 4 },
-  { set: 'Flowers', id: 5 },
-  { set: 'Fishes', id: 6 },
-  { set: 'Family', id: 7 },
+  { set: 'Weather', id: 0, img: weather },
+  { set: 'Vegetables', id: 1, img: vegetables },
+  { set: 'Animals', id: 2, img: animals },
+  { set: 'Trees', id: 3, img: trees },
+  { set: 'Birds', id: 4, img: birds },
+  { set: 'Flowers', id: 5, img: flowers },
+  { set: 'Fishes', id: 6, img: fishes },
+  { set: 'Family', id: 7, img: family },
 ];

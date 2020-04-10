@@ -10,6 +10,7 @@
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 // Menu
@@ -22,7 +23,7 @@
   height: 100vw;
 
   background-color: $primary;
-  transition: transform .7s ease-out;
+  transition: transform 0.7s ease-out;
   z-index: 10;
   transform: translateX(-100%);
 
@@ -59,7 +60,8 @@
     justify-content: center;
     flex-direction: column;
 
-    padding: 60px 40px;
+    padding-top: 60px;
+    padding-left: 100px;
   }
 
   &-item {
@@ -106,5 +108,70 @@
 
   &:hover {
     transform: scale(1.1);
+  }
+}
+
+// Toggle
+.toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin: 0 10px;
+
+  background: #ccc;
+  overflow: hidden;
+  border-radius: 15px;
+  vertical-align: middle;
+
+  &:after {
+    content: ' ';
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    background-color: $white;
+    border: 0;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .active & {
+    &:after {
+      margin-left: 25px;
+    }
+  }
+}
+
+.toggle-label {
+  display: inline-block;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: $white;
+  opacity: 0.6;
+
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.toggle-label-off {
+  opacity: 1;
+}
+
+.active {
+  .toggle-label-off {
+    opacity: .6;
+  }
+
+  .toggle-label-on {
+    opacity: 1;
   }
 }

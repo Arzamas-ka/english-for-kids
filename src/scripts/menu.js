@@ -30,3 +30,12 @@ const activeBurgerMenu = () => {
   });
 };
 activeBurgerMenu();
+
+const toggle = () => {
+  const toggle = document.querySelector('.toggle');
+  toggle.addEventListener('click', (event) => {
+    event.preventDefault();
+    toggle.classList.toggle('active');
+  });
+};
+toggle();
