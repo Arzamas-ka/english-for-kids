@@ -5,9 +5,38 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  &__img {
+    display: block;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
+
+  &__turnover {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 28px;
+    height: 30px;
+
+    background-image: url('../assets/icons//arrow.svg');
+    background-repeat: no-repeat;
+    border: 0;
+    opacity: 1;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .main-cards__item {
+  position: relative;
+
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,16 +52,6 @@
   border-radius: 8px;
 
   cursor: pointer;
-
-  & img {
-    display: block;
-    width: 170px;
-    height: 170px;
-    margin: 0 auto;
-
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, .125);
-  }
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
