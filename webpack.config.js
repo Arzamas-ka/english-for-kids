@@ -38,6 +38,10 @@ module.exports = {
         use: ['html-loader']
       },
       {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+      },
+      {
         test: /\.module\.s(a|c)ss$/,
         loader: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
