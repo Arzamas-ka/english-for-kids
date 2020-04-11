@@ -762,5 +762,5 @@ export const dataSets = [
   { set: 'Flowers', id: 5, img: flowersSet },
   { set: 'Fishes', id: 6, img: fishesSet },
   { set: 'Family', id: 7, img: familySet },
-  { set: 'Аurniture', id: 8, img: furnitureSet },
+  { set: 'Furniture', id: 8, img: furnitureSet },
 ];
