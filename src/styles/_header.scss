@@ -1,10 +1,11 @@
+@import "~sass-rem";
 @import './variables';
 
 // Header
 .header {
   background-color: $secondary;
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: rem(0 0 10px rgba(0, 0, 0, .7));
 }
 
 .background--transparent {
@@ -30,11 +31,11 @@
   top: 0;
   left: 0;
 
-  width: 320px;
-  height: 100vw;
+  width: rem(320px);
+  height: 100%;
 
   background-color: $primary;
-  transition: transform 0.7s ease-out;
+  transition: transform .7s ease-out;
   z-index: 10;
   transform: translateX(-100%);
 
@@ -45,18 +46,18 @@
 
   &__button-close {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: rem(5px);
+    right: rem(10px);
 
-    font-size: 2.5rem;
+    font-size: rem(36px);
     font-weight: 700;
     line-height: 1;
 
     border: 0;
     background-color: transparent;
     color: $white;
-    text-shadow: 0 1px 0 #fff;
-    opacity: 0.5;
+    text-shadow: rem(0 1px 0 $white);
+    opacity: .5;
     outline: none;
 
     cursor: pointer;
@@ -71,18 +72,18 @@
     justify-content: center;
     flex-direction: column;
 
-    padding-top: 60px;
-    padding-left: 100px;
+    padding-top: rem(60px);
+    padding-left: rem(100px);
   }
 
   &-item {
-    padding: 10px 0;
+    padding: rem(10px 0);
   }
 
   &-link {
-    font-size: 20px;
+    font-size: rem(20px);
     color: $white;
-    opacity: 0.6;
+    opacity: .6;
 
     &:hover {
       opacity: 1;
@@ -101,9 +102,9 @@
   justify-content: space-around;
   align-items: center;
 
-  width: 40px;
+  width: rem(40px);
   height: 100%;
-  padding: 10px 0;
+  padding: rem(10px 0);
 
   cursor: pointer;
 
@@ -111,10 +112,10 @@
     display: block;
 
     width: 80%;
-    height: 3px;
-    margin: 4px 0;
+    height: rem(3px);
+    margin: rem(4px 0);
 
-    background-color: white;
+    background-color: $white;
   }
 
   &:hover {
@@ -130,30 +131,30 @@
 
 .toggle-switch {
   display: inline-block;
-  width: 50px;
-  height: 25px;
-  margin: 0 10px;
+  width: rem(50px);
+  height: rem(25px);
+  margin: rem(0 10px);
 
-  background: #ccc;
+  background: $gray-400;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: rem(15px);
   vertical-align: middle;
 
   &:after {
     content: ' ';
     display: block;
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
 
     background-color: $white;
     border: 0;
     border-radius: 50%;
-    transition: all 0.2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
 
   .active & {
     &:after {
-      margin-left: 25px;
+      margin-left: rem(25px);
     }
   }
 }
@@ -161,10 +162,10 @@
 .toggle-label {
   display: inline-block;
 
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: bold;
   color: $white;
-  opacity: 0.6;
+  opacity: .6;
 
   text-transform: uppercase;
 

@@ -17,7 +17,7 @@ export const renderMenu = () => {
   return item;
 };
 
-const activeBurgerMenu = () => {
+const activationBurgerMenu = () => {
   const menu = document.querySelector('.menu');
   const background = document.querySelector('.background');
 
@@ -34,13 +34,13 @@ const activeBurgerMenu = () => {
 
   });
 };
-activeBurgerMenu();
+activationBurgerMenu();
 
-const toggle = () => {
+const toggleTrayPlay = () => {
   const toggle = document.querySelector('.toggle');
   toggle.addEventListener('click', (event) => {
     event.preventDefault();
     toggle.classList.toggle('active');
   });
 };
-toggle();
+toggleTrayPlay();
