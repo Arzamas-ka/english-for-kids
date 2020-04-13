@@ -1,7 +1,12 @@
-import { renderMenu } from './scripts/menu';
-import { renderMainCards } from './scripts/mainCards';
+import { menuRender } from './scripts/render/menuRender';
+import { renderCategoriesCards } from './scripts/render/categoriesCardsRender';
+import { toggleTrainPlay } from './scripts/actions/trainPlayActions';
+import { clickOnMenu, activationBurgerMenu } from './scripts/actions/menuActions';
 
 import './styles/index.scss';
 
-renderMenu();
-renderMainCards();
+menuRender();
+renderCategoriesCards();
+toggleTrainPlay();
+clickOnMenu();
+activationBurgerMenu();

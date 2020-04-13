@@ -17,7 +17,6 @@ import hailImg from '../../assets/images/hail.png';
 import rainbowImg from '../../assets/images/rainbow.png';
 import windImg from '../../assets/images/wind.png';
 import avalancheImg from '../../assets/images/avalanche.png';
-import snowImg from '../../assets/images/snow.png';
 import beansImg from '../../assets/images/beans.png';
 import beetImg from '../../assets/images/beet.png';
 import cabbageImg from '../../assets/images/cabbage.png';
@@ -27,7 +26,6 @@ import eggplantImg from '../../assets/images/eggplant.png';
 import garlicImg from '../../assets/images/garlic.png';
 import maizeImg from '../../assets/images/maize.png';
 import potatoImg from '../../assets/images/potato.png';
-import tomatoImg from '../../assets/images/tomato.png';
 import beaverImg from '../../assets/images/beaver.png';
 import camelImg from '../../assets/images/camel.png';
 import chimpanzeeImg from '../../assets/images/chimpanzee.png';
@@ -37,7 +35,6 @@ import elkImg from '../../assets/images/elk.png';
 import foxImg from '../../assets/images/fox.png';
 import frogImg from '../../assets/images/frog.png';
 import giraffeImg from '../../assets/images/giraffe.png';
-import hedgehogImg from '../../assets/images/hedgehog.png';
 import aspenImg from '../../assets/images/aspen.png';
 import birchImg from '../../assets/images/birch.png';
 import firImg from '../../assets/images/fir.png';
@@ -47,7 +44,6 @@ import oakImg from '../../assets/images/oak.png';
 import palmImg from '../../assets/images/palm.png';
 import pineImg from '../../assets/images/pine.png';
 import viburnumImg from '../../assets/images/viburnum.png';
-import poplarImg from '../../assets/images/poplar.png';
 import canaryImg from '../../assets/images/canary.png';
 import chickadeeImg from '../../assets/images/chickadee.png';
 import cockatooImg from '../../assets/images/cockatoo.png';
@@ -57,7 +53,6 @@ import eagleImg from '../../assets/images/eagle.png';
 import emuImg from '../../assets/images/emu.png';
 import flamingoImg from '../../assets/images/flamingo.png';
 import gooseImg from '../../assets/images/goose.png';
-import gullImg from '../../assets/images/gull.png';
 import bellflowerImg from '../../assets/images/bellflower.png';
 import camomileImg from '../../assets/images/camomile.png';
 import cornflowerImg from '../../assets/images/cornflower.png';
@@ -67,7 +62,6 @@ import irisImg from '../../assets/images/iris.png';
 import jasmineImg from '../../assets/images/jasmine.png';
 import lilyImg from '../../assets/images/lily.png';
 import mimosaImg from '../../assets/images/mimosa.png';
-import violetImg from '../../assets/images/violet.png';
 import bassImg from '../../assets/images/bass.png';
 import carpImg from '../../assets/images/carp.png';
 import catfishImg from '../../assets/images/catfish.png';
@@ -77,7 +71,6 @@ import koiImg from '../../assets/images/koi.png';
 import pikeImg from '../../assets/images/pike.png';
 import salmonImg from '../../assets/images/salmon.png';
 import sharkImg from '../../assets/images/shark.png';
-import walleyeImg from '../../assets/images/walleye.png';
 import auntImg from '../../assets/images/aunt.png';
 import brotherImg from '../../assets/images/brother.png';
 import dadImg from '../../assets/images/dad.png';
@@ -87,7 +80,6 @@ import householdImg from '../../assets/images/household.png';
 import mamaImg from '../../assets/images/mama.png';
 import sisterImg from '../../assets/images/sister.png';
 import uncleImg from '../../assets/images/uncle.png';
-import manImg from '../../assets/images/man.png';
 import armchairImg from '../../assets/images/armchair.png';
 import armoireImg from '../../assets/images/armoire.png';
 import bedImg from '../../assets/images/bed.png';
@@ -97,7 +89,6 @@ import carpetImg from '../../assets/images/carpet.png';
 import clockImg from '../../assets/images/clock.png';
 import couchImg from '../../assets/images/couch.png';
 import curtainsImg from '../../assets/images/curtains.png';
-import fireplaceImg from '../../assets/images/fireplace.png';
 
 import cloudAud from '../../assets/audio/cloud.mp3';
 import climateAud from '../../assets/audio/climate.mp3';
@@ -108,7 +99,6 @@ import hailAud from '../../assets/audio/hail.mp3';
 import rainbowAud from '../../assets/audio/rainbow.mp3';
 import windAud from '../../assets/audio/wind.mp3';
 import avalancheAud from '../../assets/audio/avalanche.mp3';
-import snowAud from '../../assets/audio/snow.mp3';
 import beansAud from '../../assets/audio/beans.mp3';
 import beetAud from '../../assets/audio/beet.mp3';
 import cabbageAud from '../../assets/audio/cabbage.mp3';
@@ -118,7 +108,6 @@ import eggplantAud from '../../assets/audio/eggplant.mp3';
 import garlicAud from '../../assets/audio/garlic.mp3';
 import maizeAud from '../../assets/audio/maize.mp3';
 import potatoAud from '../../assets/audio/potato.mp3';
-import tomatoAud from '../../assets/audio/tomato.mp3';
 import beaverAud from '../../assets/audio/beaver.mp3';
 import camelAud from '../../assets/audio/camel.mp3';
 import chimpanzeeAud from '../../assets/audio/chimpanzee.mp3';
@@ -128,7 +117,6 @@ import elkAud from '../../assets/audio/elk.mp3';
 import foxAud from '../../assets/audio/fox.mp3';
 import frogAud from '../../assets/audio/frog.mp3';
 import giraffeAud from '../../assets/audio/giraffe.mp3';
-import hedgehogAud from '../../assets/audio/hedgehog.mp3';
 import aspenAud from '../../assets/audio/aspen.mp3';
 import birchAud from '../../assets/audio/birch.mp3';
 import firAud from '../../assets/audio/fir.mp3';
@@ -138,7 +126,6 @@ import oakAud from '../../assets/audio/oak.mp3';
 import palmAud from '../../assets/audio/palm.mp3';
 import pineAud from '../../assets/audio/pine.mp3';
 import viburnumAud from '../../assets/audio/viburnum.mp3';
-import poplarAud from '../../assets/audio/poplar.mp3';
 import canaryAud from '../../assets/audio/canary.mp3';
 import chickadeeAud from '../../assets/audio/chickadee.mp3';
 import cockatooAud from '../../assets/audio/cockatoo.mp3';
@@ -148,7 +135,6 @@ import eagleAud from '../../assets/audio/eagle.mp3';
 import emuAud from '../../assets/audio/emu.mp3';
 import flamingoAud from '../../assets/audio/flamingo.mp3';
 import gooseAud from '../../assets/audio/goose.mp3';
-import gullAud from '../../assets/audio/gull.mp3';
 import bellflowerAud from '../../assets/audio/bellflower.mp3';
 import camomileAud from '../../assets/audio/camomile.mp3';
 import cornflowerAud from '../../assets/audio/cornflower.mp3';
@@ -158,7 +144,6 @@ import irisAud from '../../assets/audio/iris.mp3';
 import jasmineAud from '../../assets/audio/jasmine.mp3';
 import lilyAud from '../../assets/audio/lily.mp3';
 import mimosaAud from '../../assets/audio/mimosa.mp3';
-import violetAud from '../../assets/audio/violet.mp3';
 import bassAud from '../../assets/audio/bass.mp3';
 import carpAud from '../../assets/audio/carp.mp3';
 import catfishAud from '../../assets/audio/catfish.mp3';
@@ -168,7 +153,6 @@ import koiAud from '../../assets/audio/koi.mp3';
 import pikeAud from '../../assets/audio/pike.mp3';
 import salmonAud from '../../assets/audio/salmon.mp3';
 import sharkAud from '../../assets/audio/shark.mp3';
-import walleyeAud from '../../assets/audio/walleye.mp3';
 import auntAud from '../../assets/audio/aunt.mp3';
 import brotherAud from '../../assets/audio/brother.mp3';
 import dadAud from '../../assets/audio/dad.mp3';
@@ -178,7 +162,6 @@ import householdAud from '../../assets/audio/household.mp3';
 import mama from '../../assets/audio/mama.mp3';
 import sisterAud from '../../assets/audio/sister.mp3';
 import uncle from '../../assets/audio/uncle.mp3';
-import manAud from '../../assets/audio/man.mp3';
 import armchairAud from '../../assets/audio/armchair.mp3';
 import armoireAud from '../../assets/audio/armoire.mp3';
 import bed from '../../assets/audio/bed.mp3';
@@ -188,9 +171,8 @@ import carpetAud from '../../assets/audio/carpet.mp3';
 import clock from '../../assets/audio/clock.mp3';
 import couchAud from '../../assets/audio/couch.mp3';
 import curtainsAud from '../../assets/audio/curtains.mp3';
-import fireplaceAud from '../../assets/audio/fireplace.mp3';
 
-export const dataCarts = [
+export const dataCardsWords = [
   [
     {
       word: 'cloud',
@@ -246,12 +228,6 @@ export const dataCarts = [
       translation: 'лавина',
       image: avalancheImg,
       audioSrc: avalancheAud,
-    },
-    {
-      word: 'snow',
-      translation: 'снег',
-      image: snowImg,
-      audioSrc: snowAud,
     },
   ],
   [
@@ -310,12 +286,6 @@ export const dataCarts = [
       image: potatoImg,
       audioSrc: potatoAud,
     },
-    {
-      word: 'tomato',
-      translation: 'помидор',
-      image: tomatoImg,
-      audioSrc: tomatoAud,
-    },
   ],
   [
     {
@@ -371,12 +341,6 @@ export const dataCarts = [
       translation: 'жираф',
       image: giraffeImg,
       audioSrc: giraffeAud,
-    },
-    {
-      word: 'hedgehog',
-      translation: 'ёж',
-      image: hedgehogImg,
-      audioSrc: hedgehogAud,
     },
   ],
   [
@@ -434,12 +398,6 @@ export const dataCarts = [
       image: viburnumImg,
       audioSrc: viburnumAud,
     },
-    {
-      word: 'poplar',
-      translation: 'тополь',
-      image: poplarImg,
-      audioSrc: poplarAud,
-    },
   ],
   [
     {
@@ -495,12 +453,6 @@ export const dataCarts = [
       translation: 'гусь',
       image: gooseImg,
       audioSrc: gooseAud,
-    },
-    {
-      word: 'gull',
-      translation: 'чайка',
-      image: gullImg,
-      audioSrc: gullAud,
     },
   ],
   [
@@ -558,12 +510,6 @@ export const dataCarts = [
       image: mimosaImg,
       audioSrc: mimosaAud,
     },
-    {
-      word: 'violet',
-      translation: 'фиалка',
-      image: violetImg,
-      audioSrc: violetAud,
-    },
   ],
   [
     {
@@ -619,12 +565,6 @@ export const dataCarts = [
       translation: 'акула',
       image: sharkImg,
       audioSrc: sharkAud,
-    },
-    {
-      word: 'walleye',
-      translation: 'судак',
-      image: walleyeImg,
-      audioSrc: walleyeAud,
     },
   ],
   [
@@ -682,12 +622,6 @@ export const dataCarts = [
       image: uncleImg,
       audioSrc: uncle,
     },
-    {
-      word: 'man',
-      translation: 'мужчина',
-      image: manImg,
-      audioSrc: manAud,
-    },
   ],
   [
     {
@@ -744,16 +678,10 @@ export const dataCarts = [
       image: curtainsImg,
       audioSrc: curtainsAud,
     },
-    {
-      word: 'fireplace',
-      translation: 'камин',
-      image: fireplaceImg,
-      audioSrc: fireplaceAud,
-    },
-  ],
+  ]
 ];
 
-export const dataSets = [
+export const dataCategoriesCards = [
   { set: 'Weather', id: 0, img: weatherSet },
   { set: 'Vegetables', id: 1, img: vegetablesSet },
   { set: 'Animals', id: 2, img: animalsSet },
