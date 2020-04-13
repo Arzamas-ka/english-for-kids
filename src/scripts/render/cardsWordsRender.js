@@ -35,6 +35,7 @@ export const cardsWordsRender = (cardsIndex) => {
 
     const playIcon = document.createElement('i');
     playIcon.className = 'card__play';
+    playIcon.setAttribute('id', index);
     cardLink.append(playIcon);
 
     const h3 = document.createElement('h3');
@@ -48,6 +49,7 @@ export const cardsWordsRender = (cardsIndex) => {
     cardLink.append(img);
 
     const audio = document.createElement('audio');
+    audio.setAttribute('id', index);
     cardLink.append(audio);
     const source = document.createElement('source');
     source.setAttribute('src', word.audioSrc);
@@ -59,6 +61,6 @@ export const cardsWordsRender = (cardsIndex) => {
     const mainWrapper = document.querySelector('.main-wrapper');
     mainWrapper.append(cardsWrapper);
 
-    cardsWordsPlay(cardLink);
+    cardsWordsPlay(cardLink ,audio);
   });
 };
