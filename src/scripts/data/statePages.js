@@ -1,5 +1,5 @@
 export const statePages = {
-  train: true,
-  play: false,
+  train: 'train',
+  play: 'play',
 };
 

@@ -1,5 +1,4 @@
 import { cardsWordsRender } from '../render/cardsWordsRender';
-// import { renderCategoriesCards } from '../render/categoriesCardsRender';
 
 export const clickOnMenu = () => {
   const menuItems = document.querySelector('.menu-list');
@@ -15,24 +14,15 @@ export const clickOnMenu = () => {
   });
 };
 
-
 export const activationBurgerMenu = () => {
   const menu = document.querySelector('.menu');
   const background = document.querySelector('.background');
 
   const burgerMenu = document.querySelector('.burger-menu');
-    burgerMenu.addEventListener('click', () => {
-
-      // const cardsContainer = document.querySelector('.cards');
-      // if (cardsContainer) {
-      //   cardsContainer.remove();
-      //   renderCategoriesCards();
-      // }
-
-
-      menu.classList.add('menu--open');
-      background.classList.add('background--transparent');
-    });
+  burgerMenu.addEventListener('click', () => {
+    menu.classList.add('menu--open');
+    background.classList.add('background--transparent');
+  });
 
   const menuButton = document.querySelector('.menu__button-close');
   menuButton.addEventListener('click', () => {
@@ -45,4 +35,3 @@ export const activationBurgerMenu = () => {
     background.classList.remove('background--transparent');
   });
 };
-

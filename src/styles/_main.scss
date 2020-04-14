@@ -1,7 +1,7 @@
 @import '~sass-rem';
 @import './variables';
 
-// Main cards
+// Cards with categories
 .set-cards {
   display: flex;
   justify-content: space-between;
@@ -28,7 +28,7 @@
     height: rem(220px);
     margin: rem(20px 25px);
 
-    background-color: $secondary;
+    // background-color: $secondary;
     color: $white;
     background-clip: border-box;
     border: rem(1px solid rgba(0, 0, 0, 0.1));
@@ -54,7 +54,7 @@
   }
 }
 
-// cards with words
+// Cards with words
 .cards {
   display: flex;
   justify-content: space-between;
@@ -105,39 +105,34 @@
     border: rem(1px solid rgba(0, 0, 0, 0.1));
   }
 
-  &__turnover {
-    position: absolute;
-    top: rem(3px);
-    left: rem(10px);
-    width: rem(28px);
-    height: rem(30px);
-
-    background-image: url('../assets/icons/arrow.svg');
-    background-repeat: no-repeat;
-    opacity: 1;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
+  &__turnover,
   &__play {
     position: absolute;
     top: rem(3px);
-    right: rem(10px);
     width: rem(28px);
     height: rem(30px);
 
-    background-image: url('../assets/icons/play.svg');
     background-repeat: no-repeat;
     opacity: 1;
 
-    &:hover {
+    &__turnover:hover,
+    &__play:hover {
       transform: scale(1.1);
     }
   }
 
-  &__front {
+  &__turnover {
+    left: rem(10px);
+    background-image: url('../assets/icons/arrow.svg');
+  }
+
+  &__play {
+    right: rem(10px);
+    background-image: url('../assets/icons/play.svg');
+  }
+
+  &__front,
+  &__back {
     position: absolute;
     backface-visibility: hidden;
 
@@ -172,26 +167,9 @@
   }
 
   &__back {
-    position: absolute;
-    backface-visibility: hidden;
-
-    width: 100%;
-    height: 100%;
-
-    // background-color: dodgerblue;
     color: white;
     transform: rotateY(180deg);
 
     background-color: $cyan;
-    background-clip: border-box;
-    border: rem(1px solid rgba(0, 0, 0, 0.1));
-    border-radius: rem(8px);
-
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: rem(0 10px 20px rgba(0, 0, 0, 0.4));
-      transition: 0.3s;
-    }
   }
 }

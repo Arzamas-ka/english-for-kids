@@ -1,10 +1,7 @@
 import { dataCardsWords } from '../data/dataCards';
 import { A_TAG_NAME } from '../data/constants';
 import { cardPlay } from '../actions/cardPlay';
-import {
-  cardFlipOn,
-  cardFlipOff
-} from '../actions/cardFlip';
+import { cardFlipOn, cardFlipOff } from '../actions/cardFlip';
 
 export const getExpectedElement = (event) => {
   let expectedElem;
@@ -22,11 +19,10 @@ export const getExpectedElement = (event) => {
 let cardsWrapper;
 export const cardsWordsRender = (cardsIndex) => {
   const cardsContainer = document.querySelector('.set-cards');
-  if(cardsContainer) cardsContainer.remove();
-  // cardsContainer.remove();
+  if (cardsContainer) cardsContainer.remove();
 
   const cardsWords = document.querySelector('.cards');
-  if(cardsWords) cardsWords.remove();
+  if (cardsWords) cardsWords.remove();
 
   const dataCards = dataCardsWords[cardsIndex];
 
@@ -39,7 +35,7 @@ export const cardsWordsRender = (cardsIndex) => {
 };
 
 const cardsFrontAndBack = (word, index) => {
-  // front
+  // Front cards
   const cardLinkFront = document.createElement('a');
   cardLinkFront.className = 'card__front';
   cardLinkFront.setAttribute('id', index);
@@ -76,7 +72,7 @@ const cardsFrontAndBack = (word, index) => {
   const cardContainer = document.createElement('div');
   cardContainer.className = 'card__container';
 
-  // back
+  // Back cards
   const cardLinkBack = document.createElement('a');
   cardLinkBack.className = 'card__back';
   cardLinkBack.setAttribute('id', index);
@@ -104,16 +100,6 @@ const cardsFrontAndBack = (word, index) => {
   cardItem.append(cardLinkBack);
 
   cardPlay(cardLinkFront, audio, cardsWrapper);
-  cardFlipOn(
-    cardsWrapper,
-    cardLinkFront,
-    cardItem,
-    turnoverIcon,
-    h3,
-  );
-  cardFlipOff(
-    cardsWrapper, 
-    cardLinkFront, 
-    cardItem, 
-  );
+  cardFlipOn(cardsWrapper, cardLinkFront, cardItem, turnoverIcon, h3);
+  cardFlipOff(cardsWrapper, cardLinkFront, cardItem);
 };
