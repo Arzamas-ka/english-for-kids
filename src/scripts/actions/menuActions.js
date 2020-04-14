@@ -1,4 +1,5 @@
 import { cardsWordsRender } from '../render/cardsWordsRender';
+import { renderCategoriesCardsTrain } from '../render/categoriesCardsRender';
 
 export const clickOnMenu = () => {
   const menuItems = document.querySelector('.menu-list');
@@ -6,6 +7,17 @@ export const clickOnMenu = () => {
     const indexClickableCard = Number(event.target.getAttribute('id'));
 
     cardsWordsRender(indexClickableCard);
+
+    const menu = document.querySelector('.menu');
+    menu.classList.remove('menu--open');
+    const background = document.querySelector('.background');
+    background.classList.remove('background--transparent');
+  });
+};
+
+export const clickLogo = () => {
+  document.querySelector('.logo').addEventListener('click', () => {
+    renderCategoriesCardsTrain();
 
     const menu = document.querySelector('.menu');
     menu.classList.remove('menu--open');

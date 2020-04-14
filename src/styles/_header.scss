@@ -25,6 +25,23 @@
   align-items: center;
 }
 
+.logo {
+  position: absolute;
+  top: rem(50px);
+  left: rem(3px);
+
+  & p {
+    font-size: rem(40px);
+    color: darkslategrey;
+    font-weight: 900;
+    text-align: center;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
 // Menu
 .menu {
   position: fixed;
@@ -46,10 +63,10 @@
 
   &__button-close {
     position: absolute;
-    top: rem(5px);
-    right: rem(10px);
+    top: rem(20px);
+    right: rem(25px);
 
-    font-size: rem(36px);
+    font-size: rem(40px);
     font-weight: 700;
     line-height: 1;
 
@@ -72,7 +89,7 @@
     justify-content: center;
     flex-direction: column;
 
-    padding-top: rem(60px);
+    padding-top: rem(250px);
     padding-left: rem(100px);
   }
 
@@ -82,6 +99,7 @@
 
   &-link {
     font-size: rem(20px);
+    font-weight: 700;
     color: $white;
     opacity: 0.6;
 
@@ -135,7 +153,7 @@
   height: rem(25px);
   margin: rem(0 10px);
 
-  background: rgba(0, 0, 0, .15);
+  background: rgba(0, 0, 0, 0.15);
   overflow: hidden;
   border-radius: rem(15px);
   vertical-align: middle;
