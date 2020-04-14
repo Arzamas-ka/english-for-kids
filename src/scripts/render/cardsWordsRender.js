@@ -19,21 +19,24 @@ export const getExpectedElement = (event) => {
   cardsWordsRender(indexClickableCard);
 };
 
+let cardsWrapper;
 export const cardsWordsRender = (cardsIndex) => {
   const cardsContainer = document.querySelector('.set-cards');
-  cardsContainer.remove();
+  if(cardsContainer) cardsContainer.remove();
+  // cardsContainer.remove();
+
+  const cardsWords = document.querySelector('.cards');
+  if(cardsWords) cardsWords.remove();
+
   const dataCards = dataCardsWords[cardsIndex];
 
-  const cardsWrapper = document.createElement('div');
-  cardsWrapper.className = 'card';
+  cardsWrapper = document.createElement('div');
+  cardsWrapper.className = 'cards';
 
   dataCards.forEach((word, index) => {
     cardsFrontAndBack(word, index);
   });
 };
-
-const cardsWrapper = document.createElement('div');
-cardsWrapper.className = 'cards';
 
 const cardsFrontAndBack = (word, index) => {
   // front

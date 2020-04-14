@@ -1,4 +1,5 @@
 import { cardsWordsRender } from '../render/cardsWordsRender';
+// import { renderCategoriesCards } from '../render/categoriesCardsRender';
 
 export const clickOnMenu = () => {
   const menuItems = document.querySelector('.menu-list');
@@ -21,6 +22,14 @@ export const activationBurgerMenu = () => {
 
   const burgerMenu = document.querySelector('.burger-menu');
     burgerMenu.addEventListener('click', () => {
+
+      // const cardsContainer = document.querySelector('.cards');
+      // if (cardsContainer) {
+      //   cardsContainer.remove();
+      //   renderCategoriesCards();
+      // }
+
+
       menu.classList.add('menu--open');
       background.classList.add('background--transparent');
     });
