@@ -18,10 +18,5 @@ module.exports = {
       "semi": ["error", "always"],
       "quotes": ["error", "single"]
   },
-  "eslintConfig": {
-    "extends": ["strict/es5"],
-    "rules": {
-      "no-debugger": 0
-    }
-  }
 };
+
