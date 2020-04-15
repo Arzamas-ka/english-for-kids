@@ -40,6 +40,10 @@ module.exports = {
       {
         test: /\.mp3$/,
         loader: 'file-loader',
+        options: {
+          name: '[name].[hash].[ext]',
+          outputPath: 'audio'
+        }
       },
       {
         test: /\.module\.s(a|c)ss$/,

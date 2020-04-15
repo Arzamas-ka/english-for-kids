@@ -3,6 +3,7 @@ import { A_TAG_NAME } from '../data/constants';
 import { cardPlay } from '../actions/cardPlay';
 import { cardFlipOn, cardFlipOff } from '../actions/cardFlip';
 
+
 export const getExpectedElement = (event) => {
   let expectedElem;
   event.path.forEach((elem) => {
@@ -13,11 +14,11 @@ export const getExpectedElement = (event) => {
   if (!expectedElem) return;
 
   const indexClickableCard = Number(expectedElem.getAttribute('id'));
-  cardsWordsRender(indexClickableCard);
+  cardsWordsRenderTrain(indexClickableCard);
 };
 
 let cardsWrapper;
-export const cardsWordsRender = (cardsIndex) => {
+export const cardsWordsRenderTrain = (cardsIndex) => {
   const cardsContainer = document.querySelector('.set-cards');
   if (cardsContainer) cardsContainer.remove();
 

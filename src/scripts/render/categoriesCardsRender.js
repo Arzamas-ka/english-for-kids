@@ -2,9 +2,9 @@ import { dataCategoriesCards } from '../data/dataCards';
 import { getExpectedElement } from './cardsWordsRender';
 
 export const renderCategoriesCardsTrain = () => {
-  const train = document.querySelector('.toggle-label-off');
-  const style = getComputedStyle(train).opacity;
-  if (style === '1' && document.querySelector('.set-cards')) {
+  const train = document.querySelector('.on-off-toggle__input').checked;
+
+  if (train === false && document.querySelector('.set-cards')) {
     document.querySelector('.set-cards').innerHTML = '';
 
     const setCards = dataCategoriesCards.map((card) => {
@@ -26,9 +26,9 @@ export const renderCategoriesCardsTrain = () => {
       setCardsWrapper.append(cardLink);
     });
     return setCards;
-  } else if (style === '1' && document.querySelector('.cards')) {
+  } else if (train === false && document.querySelector('.cards')) {
     document.querySelector('.cards').remove();
-
+    console.log('object');
     const cardsWrapper = document.createElement('div');
     cardsWrapper.className = 'set-cards';
     document.querySelector('.main-wrapper').append(cardsWrapper);
@@ -52,7 +52,7 @@ export const renderCategoriesCardsTrain = () => {
       setCardsWrapp.append(cardLink);
     });
     return setCards;
-  } else if (style !== '1' && document.querySelector('.cards')) {
+  } else if (train === true && document.querySelector('.cards')) {
     const setCardsWrapper = document.querySelector('.cards');
     setCardsWrapper.innerHTML = '';
 
@@ -81,17 +81,14 @@ export const renderCategoriesCardsTrain = () => {
   }
 };
 
-const setCardsWrapper = document.querySelector('.set-cards');
-setCardsWrapper.addEventListener('click', getExpectedElement);
-
 export const renderCategoriesCardsPlay = () => {
   if (document.querySelector('.cards')) return;
 
-  const train = document.querySelector('.toggle-label-off');
-  const style = getComputedStyle(train).opacity;
-  if (style !== '1' && document.querySelector('.set-cards')) {
-    document.querySelector('.set-cards').innerHTML = '';
+  const train = document.querySelector('.on-off-toggle__input').checked;
 
+  if (train === true && document.querySelector('.set-cards')) {
+    document.querySelector('.set-cards').innerHTML = '';
+    console.log('set');
     const setCards = dataCategoriesCards.map((card) => {
       const cardLink = document.createElement('a');
       cardLink.className = 'set-cards__item';
@@ -113,3 +110,8 @@ export const renderCategoriesCardsPlay = () => {
     return setCards;
   }
 };
+
+if (document.querySelector('.set-cards'))
+  document
+    .querySelector('.set-cards')
+    .addEventListener('click', getExpectedElement);

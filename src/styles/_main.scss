@@ -4,7 +4,7 @@
 // Cards with categories
 .set-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 
   &__img {
@@ -57,7 +57,7 @@
 // Cards with words
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 

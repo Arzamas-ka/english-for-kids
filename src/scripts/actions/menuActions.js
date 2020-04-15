@@ -1,4 +1,4 @@
-import { cardsWordsRender } from '../render/cardsWordsRender';
+import { cardsWordsRenderTrain } from '../render/cardsWordsRender';
 import { renderCategoriesCardsTrain } from '../render/categoriesCardsRender';
 
 export const clickOnMenu = () => {
@@ -6,7 +6,7 @@ export const clickOnMenu = () => {
   menuItems.addEventListener('click', (event) => {
     const indexClickableCard = Number(event.target.getAttribute('id'));
 
-    cardsWordsRender(indexClickableCard);
+    cardsWordsRenderTrain(indexClickableCard);
 
     const menu = document.querySelector('.menu');
     menu.classList.remove('menu--open');

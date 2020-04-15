@@ -4,11 +4,12 @@ import {
 } from '../render/categoriesCardsRender';
 
 export const toggleTrainPlay = () => {
-  const toggle = document.querySelector('.toggle');
+  const toggle = document.querySelector('.on-off-toggle');
+  console.log('toggle');
 
   toggle.addEventListener('click', (event) => {
-    event.preventDefault();
-    toggle.classList.toggle('active');
+    console.log(event.target);
+    // toggle.classList.toggle('active');
 
     renderCategoriesCardsTrain();
     renderCategoriesCardsPlay();

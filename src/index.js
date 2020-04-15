@@ -3,7 +3,7 @@ import {
   renderCategoriesCardsTrain,
   renderCategoriesCardsPlay,
 } from './scripts/render/categoriesCardsRender';
-import { toggleTrainPlay } from './scripts/actions/trainPlayActions';
+import { toggleTrainPlay } from './scripts/actions/toggleTrainPlay';
 import {
   clickOnMenu,
   activationBurgerMenu,

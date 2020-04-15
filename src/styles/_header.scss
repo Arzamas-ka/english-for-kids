@@ -122,7 +122,6 @@
 
   width: rem(40px);
   height: 100%;
-  padding: rem(10px 0);
 
   cursor: pointer;
 
@@ -142,66 +141,71 @@
 }
 
 // Toggle
-.toggle {
-  display: flex;
-  align-items: center;
+.on-off-toggle {
+  position: relative;
+
+  display: inline-block;
+  width: rem(80px);
+  height: rem(30px);
 }
 
-.toggle-switch {
-  display: inline-block;
-  width: rem(50px);
+.on-off-toggle__slider {
+  display: block;
+  width: rem(80px);
   height: rem(25px);
-  margin: rem(0 10px);
 
-  background: rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  border-radius: rem(15px);
-  vertical-align: middle;
+  border-radius: rem(30px);
+  background-color: rgba(0, 0, 0, .17);
 
-  &:after {
-    content: ' ';
+  transition: background-color .4s;
+
+  &:before {
+    content: '';
     display: block;
     width: rem(25px);
     height: rem(25px);
 
+    position: absolute;
+    top: 0;
+    left: 0;
+
     background-color: $white;
-    border: 0;
-    border-radius: 50%;
-    transition: all 0.2s ease-in-out;
+    border-radius: 100%;
+    
+    transition: .4s;
+    z-index: 5;
   }
 
-  .active & {
-    &:after {
-      margin-left: rem(25px);
-    }
-  }
-}
+  &:after {
+    content: 'Train';
 
-.toggle-label {
-  display: inline-block;
+    display: block;
+    padding-left: rem(33px);
 
-  font-size: rem(16px);
-  font-weight: bold;
-  color: $white;
-  opacity: 0.6;
-
-  text-transform: uppercase;
-
-  &:hover {
-    opacity: 1;
+    line-height: rem(24px);
+    font-size: rem(12px);
+    font-weight: bold;
+    color: $white;
+    text-transform: uppercase;
+   
+    transition: all .4s;
   }
 }
 
-.toggle-label-off {
-  opacity: 1;
+.on-off-toggle__input {
+  position: absolute;
+  opacity: 0;
 }
 
-.active {
-  .toggle-label-off {
-    opacity: 0.6;
-  }
+.on-off-toggle__input:checked + .on-off-toggle__slider {
+  background-color: rgba(0, 0, 0, .17);
 
-  .toggle-label-on {
-    opacity: 1;
+  &:before {
+    transform: translateX(55px);
+  }
+  &:after {
+    content: 'Play';
+    color: $white;
+    padding-left: rem(10px);
   }
 }
