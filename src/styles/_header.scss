@@ -155,9 +155,9 @@
   height: rem(25px);
 
   border-radius: rem(30px);
-  background-color: rgba(0, 0, 0, .17);
+  background-color: rgba(0, 0, 0, 0.17);
 
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 
   &:before {
     content: '';
@@ -171,8 +171,8 @@
 
     background-color: $white;
     border-radius: 100%;
-    
-    transition: .4s;
+
+    transition: 0.4s;
     z-index: 5;
   }
 
@@ -187,7 +187,7 @@
     font-weight: bold;
     color: $white;
     text-transform: uppercase;
-   
+
     transition: all .4s;
   }
 }
@@ -205,7 +205,12 @@
   }
   &:after {
     content: 'Play';
-    color: $white;
     padding-left: rem(10px);
+
+    color: $white;
+    border-radius: rem(30px);
+    background-color: $lightorange;
+
+    transition: background-color .4s;
   }
 }

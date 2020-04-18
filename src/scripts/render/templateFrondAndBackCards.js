@@ -1,41 +1,7 @@
-import { dataCardsWords } from '../data/dataCards';
-import { A_TAG_NAME } from '../data/constants';
 import { cardPlay } from '../actions/cardPlay';
 import { cardFlipOn, cardFlipOff } from '../actions/cardFlip';
 
-
-export const getExpectedElement = (event) => {
-  let expectedElem;
-  event.path.forEach((elem) => {
-    if (elem.tagName === A_TAG_NAME) {
-      expectedElem = elem;
-    }
-  });
-  if (!expectedElem) return;
-
-  const indexClickableCard = Number(expectedElem.getAttribute('id'));
-  cardsWordsRenderTrain(indexClickableCard);
-};
-
-let cardsWrapper;
-export const cardsWordsRenderTrain = (cardsIndex) => {
-  const cardsContainer = document.querySelector('.set-cards');
-  if (cardsContainer) cardsContainer.remove();
-
-  const cardsWords = document.querySelector('.cards');
-  if (cardsWords) cardsWords.remove();
-
-  const dataCards = dataCardsWords[cardsIndex];
-
-  cardsWrapper = document.createElement('div');
-  cardsWrapper.className = 'cards';
-
-  dataCards.forEach((word, index) => {
-    cardsFrontAndBack(word, index);
-  });
-};
-
-const cardsFrontAndBack = (word, index) => {
+export const templateFrondAndBackCards = (word, index, cardsWrapper) => {
   // Front cards
   const cardLinkFront = document.createElement('a');
   cardLinkFront.className = 'card__front';
@@ -93,10 +59,11 @@ const cardsFrontAndBack = (word, index) => {
   cardItem.className = 'card__item';
   cardContainer.append(cardItem);
 
-  const mainWrapper = document.querySelector('.main-wrapper');
-  mainWrapper.append(cardsWrapper);
+  document
+    .querySelector('.button-container')
+    .insertAdjacentElement('beforebegin', cardsWrapper);
 
-  cardsWrapper.append(cardContainer);
+  cardsWrapper.prepend(cardContainer);
   cardItem.append(cardLinkFront);
   cardItem.append(cardLinkBack);
 

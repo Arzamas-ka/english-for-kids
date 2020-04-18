@@ -1,6 +1,5 @@
 import { dataCategoriesCards } from '../data/dataCards';
 
-
 export const menuRender = () => {
   const item = dataCategoriesCards.map((set) => {
     const li = document.createElement('li');

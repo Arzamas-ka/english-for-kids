@@ -173,3 +173,109 @@
     background-color: $cyan;
   }
 }
+
+// Cards play
+.play-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__img {
+    display: block;
+    width: rem(320px);
+    height: rem(220px);
+    margin: 0 auto;
+    // margin-top: rem(10px);
+
+    // border-radius: 50%;
+    border-radius: rem(8px);
+    border: rem(1px solid rgba(0, 0, 0, .5));
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: rem(320px);
+    height: rem(220px);
+    margin: rem(20px 25px);
+
+    background-color: $lightblue;
+    color: $white;
+    background-clip: border-box;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+    border-radius: rem(8px);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: rem(0 10px 20px rgba(0, 0, 0, 0.4));
+      transition: 0.3s;
+    }
+  }
+}
+
+// Button Game
+.button-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & button {
+    margin: rem(10px);
+  }
+}
+
+.play__start-game,
+.play__listen {
+  width: rem(200px);
+  padding: rem(0 20px);
+
+  border: 0;
+  line-height: 2.5;
+  font-size: rem(16px);
+  text-align: center;
+  color: $white;
+  border-radius: rem(8px);
+  background-color: $secondary;
+  box-shadow: inset rem(2px 2px 3px rgba(255, 255, 255, 0.4)),
+    inset rem(-2px -2px 3px rgba(0, 0, 0, 0.4));
+
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: secondary;
+  }
+
+  &:active {
+    box-shadow: inset rem(-2px -2px 3px rgba(255, 255, 255, 0.4)),
+      inset rem(2px 2px 3px rgba(0, 0, 0, 0.4));
+  }
+}
+
+.play__listen {
+  display: none;
+
+  background-color: $lightblue;
+}
+
+.answers {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: rem(0 auto);
+  height: rem(100px);
+  overflow-x: hidden;
+
+  & img {
+    width: rem(70px);
+    height: rem(70px);
+  }
+}

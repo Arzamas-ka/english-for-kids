@@ -1,19 +1,22 @@
 import { menuRender } from './scripts/render/menuRender';
-import {
-  renderCategoriesCardsTrain,
-  renderCategoriesCardsPlay,
-} from './scripts/render/categoriesCardsRender';
+import { categoriesCardsRenderTrain } from './scripts/render/categoriesCardsRenderTrain';
+import { categoriesCardsRenderPlay } from './scripts/render/categoriesCardsRenderPlay';
 import { toggleTrainPlay } from './scripts/actions/toggleTrainPlay';
-import {
-  clickOnMenu,
-  activationBurgerMenu,
-} from './scripts/actions/menuActions';
+import { activationBurgerMenu } from './scripts/actions/activationBurgerMenu';
+import { getExpectedElement } from './scripts/helpers/getExpectedElem';
+import { clickOnMenu } from './scripts/actions/clickOnMenu';
+import { clickOnLogo } from './scripts/actions/clickOnLogo';
 
 import './styles/index.scss';
 
+categoriesCardsRenderTrain();
+categoriesCardsRenderPlay();
 menuRender();
-renderCategoriesCardsTrain();
-renderCategoriesCardsPlay();
 toggleTrainPlay();
-clickOnMenu();
 activationBurgerMenu();
+clickOnMenu();
+clickOnLogo();
+
+document
+  .querySelector('.set-cards')
+  .addEventListener('click', getExpectedElement);
