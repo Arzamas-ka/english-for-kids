@@ -3,33 +3,31 @@ import { cardsWordsRenderTrain } from '../render/cardsWordsRenderTrain';
 import { cardsWordsRenderPlay } from '../render/cardsWordsRenderPlay';
 
 export const getExpectedElement = (event) => {
-  let expectedElem;
-  event.path.forEach((elem) => {
-    if (
-      elem.tagName === A_TAG_NAME &&
-      document.querySelector('.on-off-toggle__input').checked === false
-    ) {
-      expectedElem = elem;
+  const isPlay = document.querySelector('.on-off-toggle__input').checked;
+
+  const expectedElem = event.path.find((elem) => {
+    if (elem.tagName === A_TAG_NAME && !isPlay) {
+      return elem;
     }
   });
-  if (!expectedElem) return;
 
-  const indexClickableCard = Number(expectedElem.getAttribute('id'));
-  cardsWordsRenderTrain(indexClickableCard);
+  if (expectedElem) {
+    const indexClickableCard = Number(expectedElem.getAttribute('id'));
+    cardsWordsRenderTrain(indexClickableCard);
+  }
 };
 
 export const getClickedElement = (event) => {
-  let expectedElem;
-  event.path.forEach((elem) => {
-    if (
-      elem.tagName === A_TAG_NAME &&
-      document.querySelector('.on-off-toggle__input').checked === true
-    ) {
-      expectedElem = elem;
+  const isPlay = document.querySelector('.on-off-toggle__input').checked;
+
+  const expectedElem = event.path.find((elem) => {
+    if (elem.tagName === A_TAG_NAME && isPlay) {
+      return elem;
     }
   });
-  if (!expectedElem) return;
 
-  const indexClickableCard = Number(expectedElem.getAttribute('id'));
-  cardsWordsRenderPlay(indexClickableCard);
+  if (expectedElem) {
+    const indexClickableCard = Number(expectedElem.getAttribute('id'));
+    cardsWordsRenderPlay(indexClickableCard);
+  }
 };

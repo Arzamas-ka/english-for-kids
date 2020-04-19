@@ -5,10 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+  max-height: 100vh;
+}
+
 body {
   min-width: rem(320px);
   margin: 0 auto;
-  min-height: 100vh;
+  max-height: 100vh;
 
   font-family: 'Montserrat', 'Arias', sans-serif;
   font-size: rem(14px);
@@ -44,5 +48,5 @@ li {
 .container {
   max-width: rem(1200px);
   margin: 0 auto;
-  padding: rem(20px);
+  padding: rem(15px);
 }

@@ -6,7 +6,7 @@ export const clickOnLogo = () => {
 
     const menu = document.querySelector('.menu');
     menu.classList.remove('menu--open');
-    const background = document.querySelector('.background');
-    background.classList.remove('background--transparent');
+    const backdrop = document.querySelector('.backdrop');
+    backdrop.classList.remove('backdrop--transparent');
   });
 };

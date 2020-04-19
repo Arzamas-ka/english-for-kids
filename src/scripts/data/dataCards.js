@@ -682,13 +682,13 @@ export const dataCardsWords = [
 ];
 
 export const dataCategoriesCards = [
-  { set: 'Weather', id: 0, img: weatherSet },
-  { set: 'Vegetables', id: 1, img: vegetablesSet },
-  { set: 'Animals', id: 2, img: animalsSet },
-  { set: 'Trees', id: 3, img: treesSet },
-  { set: 'Birds', id: 4, img: birdsSet },
-  { set: 'Flowers', id: 5, img: flowersSet },
-  { set: 'Fishes', id: 6, img: fishesSet },
-  { set: 'Family', id: 7, img: familySet },
-  { set: 'Furniture', id: 8, img: furnitureSet },
+  { categoryName: 'Weather', id: 0, img: weatherSet },
+  { categoryName: 'Vegetables', id: 1, img: vegetablesSet },
+  { categoryName: 'Animals', id: 2, img: animalsSet },
+  { categoryName: 'Trees', id: 3, img: treesSet },
+  { categoryName: 'Birds', id: 4, img: birdsSet },
+  { categoryName: 'Flowers', id: 5, img: flowersSet },
+  { categoryName: 'Fishes', id: 6, img: fishesSet },
+  { categoryName: 'Family', id: 7, img: familySet },
+  { categoryName: 'Furniture', id: 8, img: furnitureSet },
 ];

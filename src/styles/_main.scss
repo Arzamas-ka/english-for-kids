@@ -26,9 +26,8 @@
 
     width: rem(320px);
     height: rem(220px);
-    margin: rem(20px 25px);
+    margin: rem(15px 25px);
 
-    // background-color: $secondary;
     color: $white;
     background-clip: border-box;
     border: rem(1px solid rgba(0, 0, 0, 0.1));
@@ -83,7 +82,7 @@
 
     width: rem(320px);
     height: rem(220px);
-    margin: rem(20px 25px);
+    margin: rem(15px 25px);
 
     color: $white;
     background-clip: border-box;
@@ -185,11 +184,9 @@
     width: rem(320px);
     height: rem(220px);
     margin: 0 auto;
-    // margin-top: rem(10px);
 
-    // border-radius: 50%;
     border-radius: rem(8px);
-    border: rem(1px solid rgba(0, 0, 0, .5));
+    border: rem(1px solid rgba(0, 0, 0, 0.5));
   }
 
   &__item {
@@ -201,7 +198,7 @@
 
     width: rem(320px);
     height: rem(220px);
-    margin: rem(20px 25px);
+    margin: rem(15px 25px);
 
     background-color: $lightblue;
     color: $white;
@@ -230,7 +227,9 @@
 }
 
 .play__start-game,
-.play__listen {
+.play__listen,
+.result__success button,
+.result__unsuccess button {
   width: rem(200px);
   padding: rem(0 20px);
 
@@ -243,7 +242,6 @@
   background-color: $secondary;
   box-shadow: inset rem(2px 2px 3px rgba(255, 255, 255, 0.4)),
     inset rem(-2px -2px 3px rgba(0, 0, 0, 0.4));
-
 
   cursor: pointer;
   outline: none;
@@ -269,13 +267,91 @@
   justify-content: flex-end;
 
   width: 100%;
-  max-width: 1200px;
+  max-width: rem(1200px);
   margin: rem(0 auto);
-  height: rem(100px);
+  height: rem(60px);
   overflow-x: hidden;
 
   & img {
     width: rem(70px);
     height: rem(70px);
   }
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+}
+
+.result__success,
+.result__unsuccess {
+  display: none;
+
+  flex-direction: column;
+  text-align: center;
+
+  & img {
+    margin-bottom: rem(50px);
+  }
+
+  & p {
+    font-size: rem(30px);
+  }
+
+  & div {
+    display: flex;
+  }
+
+  & button {
+    width: rem(250px);
+    background-color: $teal;
+  }
+}
+
+// Popup
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+  left: 50%;
+  height: 85vh;
+  overflow: scroll;
+
+	background-color: $white;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
+  border-radius: rem(8px);
+  transform: translate(-50%, -50%);
+  
+  z-index: 20;
+
+	&__button-close {
+		position: absolute;
+		top: rem(20px);
+		right: rem(25px);
+
+		font-size: rem(40px);
+		font-weight: 700;
+		line-height: 1;
+
+		border: 0;
+		background-color: transparent;
+		color: $gray-500;
+		text-shadow: rem(0 1px 0 $white);
+		opacity: 0.5;
+		outline: none;
+
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+// Table
+caption {
+  padding: rem(15px);
+  font-size: rem(16px);
+  font-weight: 700;
+  color: $blue;
 }

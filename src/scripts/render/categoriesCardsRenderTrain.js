@@ -1,57 +1,50 @@
 import { templateCategoriesCardsRender } from './templateCategoriesCardsRender';
 import { getExpectedElement } from '../helpers/getExpectedElem';
-import { COLOR_ORANGE, COLOR_PINK, EMPTY_STRING } from '../data/constants';
+import {
+  createDivElement,
+  removeElement,
+  removeChildren,
+  insertBefore,
+} from '../helpers/domHelpers';
+import { COLOR_ORANGE, COLOR_PINK } from '../data/constants';
 
 export const categoriesCardsRenderTrain = () => {
-  const toggle = document.querySelector('.on-off-toggle__input').checked;
+  const isPlay = document.querySelector('.on-off-toggle__input').checked;
+  const buttonContainer = document.querySelector('.button-container');
+  const cards = createDivElement('set-cards');
 
-  if (toggle === false && document.querySelector('.set-cards')) {
-    document.querySelector('.set-cards').remove();
-    const cards = document.createElement('div');
-    cards.className = 'set-cards';
+  if (!isPlay && document.querySelector('.set-cards')) {
+    removeElement('.set-cards');
+    insertBefore(cards, buttonContainer);
+    templateCategoriesCardsRender(COLOR_PINK);
 
-    document
-      .querySelector('.button-container')
-      .insertAdjacentElement('beforebegin', cards);
-    templateCategoriesCardsRender();
-    [...document.querySelectorAll('.set-cards__item')].forEach(
-      (item) => (item.style.backgroundColor = COLOR_PINK)
-    );
     document
       .querySelector('.set-cards')
       .addEventListener('click', getExpectedElement);
+
+    return;
   }
 
-  if (toggle === true && document.querySelector('.cards')) {
-    document.querySelector('.cards').remove();
-    const cards = document.createElement('div');
-    cards.className = 'set-cards';
-    document
-      .querySelector('.button-container')
-      .insertAdjacentElement('beforebegin', cards);
-    templateCategoriesCardsRender();
-    [...document.querySelectorAll('.cards__item')].forEach(
-      (item) => (item.style.backgroundColor = COLOR_ORANGE)
-    );
+  if (isPlay && document.querySelector('.cards')) {
+    removeElement('.cards');
+    insertBefore(cards, buttonContainer);
+    templateCategoriesCardsRender(COLOR_ORANGE);
+
+    return;
   }
 
   if (
-    toggle === false &&
+    !isPlay &&
     document.querySelector('.play-cards') &&
     document.querySelector('.play__start-game') &&
     document.querySelector('.play__listen')
   ) {
-    document.querySelector('.button-container').innerHTML = EMPTY_STRING;
-    document.querySelector('.play-cards').remove();
-    const cards = document.createElement('div');
-    cards.className = 'set-cards';
-    document
-      .querySelector('.button-container')
-      .insertAdjacentElement('beforebegin', cards);
-    templateCategoriesCardsRender();
-    [...document.querySelectorAll('.set-cards__item')].forEach(
-      (item) => (item.style.backgroundColor = COLOR_PINK)
-    );
+    removeChildren('.answers');
+    removeChildren('.button-container');
+    removeElement('.play-cards');
+    insertBefore(cards, buttonContainer);
+
+    templateCategoriesCardsRender(COLOR_PINK);
     document
       .querySelector('.set-cards')
       .addEventListener('click', getExpectedElement);
