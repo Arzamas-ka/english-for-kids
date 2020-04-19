@@ -2,7 +2,7 @@ import { clickOnPopupStatistic } from '../actions/statistic';
 import { createDivElement } from '../helpers/domHelpers';
 
 export const statisticRender = () => {
-	const statistic = JSON.parse(localStorage.getItem('statistics'));
+  const statistic = JSON.parse(localStorage.getItem('statistics'));
 
 	Object.entries(statistic).forEach(([key, value]) => {
 		const row = value

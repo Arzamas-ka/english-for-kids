@@ -21,7 +21,6 @@ addClickOnToggle();
 activateBurgerMenu();
 addClickListenerOnMenu();
 clickOnLogo();
-statisticRender();
 
 document.querySelector('.set-cards').addEventListener('click', getExpectedElement);
 
@@ -34,3 +33,5 @@ const initializeStatistics = () => {
 };
 
 initializeStatistics();
+
+statisticRender();
