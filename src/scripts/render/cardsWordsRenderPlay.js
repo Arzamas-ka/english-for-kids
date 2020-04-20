@@ -79,7 +79,6 @@ export const getRightAnswer = () => {
       event.target.insertAdjacentElement('beforebegin', getSourceElem[1]);
 
       correctAnswers++;
-
       if (isSuccess(cardsCollection)) {
         resultsRender(correctAnswers, incorrectAnswers);
         return;
@@ -96,7 +95,8 @@ export const getRightAnswer = () => {
       const getSourceElem = templateAudioElement();
       getSourceElem[0].setAttribute('src', incorrectAnswerSound);
       event.target.insertAdjacentElement('beforebegin', getSourceElem[1]);
-      incorrectAnswers++;
+
+      incorrectAnswers++;     
     }
   });
 };
@@ -122,6 +122,8 @@ export const cardsWordsRenderPlay = cardsIndex => {
 
   const cardsWrapper = createDivElement('play-cards');
   cardsCollection = dataCardsWords[cardsIndex];
+  correctAnswers = 0;
+  incorrectAnswers = 0;
 
   renderCards(cardsCollection, cardsWrapper);
   renderStartGameButton();
