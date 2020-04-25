@@ -1,10 +1,10 @@
-export const cardFlipOn = (
+export const cardFlipOn = ({
   cardsWrapper,
   cardLinkFront,
   cardItem,
   turnoverIcon,
-  h3
-) => {
+  h3,
+}) => {
   cardsWrapper.addEventListener('click', (event) => {
     if (
       cardLinkFront.id === event.path[0].id &&
@@ -16,7 +16,7 @@ export const cardFlipOn = (
   });
 };
 
-export const cardFlipOff = (cardsWrapper, cardLinkFront, cardItem) => {
+export const cardFlipOff = ({ cardsWrapper, cardLinkFront, cardItem }) => {
   cardsWrapper.addEventListener('mouseout', (event) => {
     if (
       cardLinkFront.id === event.path[0].id &&

@@ -1,5 +1,6 @@
 import { cardsWordsRenderTrain } from '../render/cardsWordsRenderTrain';
 import { cardsWordsRenderPlay } from '../render/cardsWordsRenderPlay';
+import { hideElement } from '../helpers/domHelpers';
 
 export const addClickListenerOnMenu = () => {
   const menu = document.querySelector('.menu-list');
@@ -8,6 +9,9 @@ export const addClickListenerOnMenu = () => {
     (event) => {
       event.stopPropagation();
       event.preventDefault();
+
+      hideElement('.result__success');
+      hideElement('.result__unsuccess');
 
       const indexClickableCard = Number(event.target.getAttribute('id'));
 
@@ -18,6 +22,8 @@ export const addClickListenerOnMenu = () => {
         cardsWordsRenderTrain(indexClickableCard);
       }
 
+      activeMenuLink();
+
       const menu = document.querySelector('.menu');
       menu.classList.remove('menu--open');
       menu.classList.add('menu--close');
@@ -26,4 +32,13 @@ export const addClickListenerOnMenu = () => {
     },
     true
   );
+};
+
+export const activeMenuLink = () => {
+  document.querySelectorAll('.menu-link').forEach((active) => {
+    active.classList.remove('menu-link--active');
+    event.target.classList.add('menu-link--active');
+
+    document.querySelector('.title').textContent = event.target.textContent;
+  });
 };

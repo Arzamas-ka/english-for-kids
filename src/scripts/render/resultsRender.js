@@ -1,7 +1,6 @@
 import { templateAudioElement } from './templateAudioElement';
 import winAudio from '../../assets/music/win.mp3';
 import failedAudio from '../../assets/music/failed.mp3';
-
 import {
   removeChildren,
   setToFlex,
@@ -14,6 +13,7 @@ export const resultsRender = (correctAnswers, incorrectAnswers) => {
   removeChildren('.answers');
   removeElement('.play-cards');
   removeChildren('.button-container');
+  document.querySelector('.title').textContent = '';
 
   if (incorrectAnswers > 0) {
     setToFlex('.result__unsuccess');

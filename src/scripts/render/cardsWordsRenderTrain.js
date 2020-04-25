@@ -1,5 +1,5 @@
 import { dataCardsWords } from '../data/dataCards';
-import { templateFrondAndBackCards } from './templateFrondAndBackCards';
+import { templateFrontAndBackCards } from './templateFrontAndBackCards';
 import {
   createDivElement,
   removeElement,
@@ -24,6 +24,6 @@ export const cardsWordsRenderTrain = (cardsIndex) => {
   cardsWrapper = createDivElement('cards');
 
   dataCards.forEach((word, index) => {
-    templateFrondAndBackCards(word, index, cardsWrapper);
+    templateFrontAndBackCards(word, index, cardsWrapper);
   });
 };

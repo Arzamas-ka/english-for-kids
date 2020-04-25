@@ -79,6 +79,7 @@ export const getRightAnswer = () => {
       event.target.insertAdjacentElement('beforebegin', getSourceElem[1]);
 
       correctAnswers++;
+
       if (isSuccess(cardsCollection)) {
         resultsRender(correctAnswers, incorrectAnswers);
         return;
@@ -95,8 +96,7 @@ export const getRightAnswer = () => {
       const getSourceElem = templateAudioElement();
       getSourceElem[0].setAttribute('src', incorrectAnswerSound);
       event.target.insertAdjacentElement('beforebegin', getSourceElem[1]);
-
-      incorrectAnswers++;     
+      incorrectAnswers++;
     }
   });
 };
@@ -115,6 +115,7 @@ const listenButtonAudio = () => {
 };
 
 export const cardsWordsRenderPlay = cardsIndex => {
+  removeElement('.cards');
   removeElement('.set-cards');
   removeElement('.play-cards');
   removeChildren('.button-container');

@@ -1,7 +1,7 @@
 import { cardPlay } from '../actions/cardPlay';
 import { cardFlipOn, cardFlipOff } from '../actions/cardFlip';
 
-export const templateFrondAndBackCards = (word, index, cardsWrapper) => {
+export const templateFrontAndBackCards = (word, index, cardsWrapper) => {
   // Front cards
   const cardLinkFront = document.createElement('a');
   cardLinkFront.className = 'card__front';
@@ -68,6 +68,6 @@ export const templateFrondAndBackCards = (word, index, cardsWrapper) => {
   cardItem.append(cardLinkBack);
 
   cardPlay(cardLinkFront, audio, cardsWrapper);
-  cardFlipOn(cardsWrapper, cardLinkFront, cardItem, turnoverIcon, h3);
-  cardFlipOff(cardsWrapper, cardLinkFront, cardItem);
+  cardFlipOn({ cardsWrapper, cardLinkFront, cardItem, turnoverIcon, h3 });
+  cardFlipOff({ cardsWrapper, cardLinkFront, cardItem });
 };

@@ -13,18 +13,6 @@ export const categoriesCardsRenderTrain = () => {
   const buttonContainer = document.querySelector('.button-container');
   const cards = createDivElement('set-cards');
 
-  if (!isPlay && document.querySelector('.set-cards')) {
-    removeElement('.set-cards');
-    insertBefore(cards, buttonContainer);
-    templateCategoriesCardsRender(COLOR_PINK);
-
-    document
-      .querySelector('.set-cards')
-      .addEventListener('click', getExpectedElement);
-
-    return;
-  }
-
   if (isPlay && document.querySelector('.cards')) {
     removeElement('.cards');
     insertBefore(cards, buttonContainer);
@@ -48,5 +36,19 @@ export const categoriesCardsRenderTrain = () => {
     document
       .querySelector('.set-cards')
       .addEventListener('click', getExpectedElement);
+
+    return;
+  }
+
+  if (!isPlay) {
+    removeElement('.set-cards');
+    insertBefore(cards, buttonContainer);
+    templateCategoriesCardsRender(COLOR_PINK);
+
+    document
+      .querySelector('.set-cards')
+      .addEventListener('click', getExpectedElement);
+
+    return;
   }
 };

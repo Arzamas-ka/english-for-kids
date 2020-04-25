@@ -269,11 +269,11 @@
   width: 100%;
   max-width: rem(1200px);
   margin: rem(0 auto);
-  height: rem(60px);
+  height: rem(65px);
   overflow-x: hidden;
 
   & img {
-    width: rem(70px);
+    width: rem(60px);
     height: rem(70px);
   }
 }
@@ -281,6 +281,7 @@
 .results {
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 
 .result__success,

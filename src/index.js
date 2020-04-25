@@ -11,27 +11,30 @@ import { createInitialStorage } from './scripts/data/createInitialStorage';
 
 import './styles/index.scss';
 
-menuRender();
-
-categoriesCardsRenderTrain();
-categoriesCardsRenderPlay();
-
-addClickOnToggle();
-
-activateBurgerMenu();
-addClickListenerOnMenu();
-clickOnLogo();
-
-document.querySelector('.set-cards').addEventListener('click', getExpectedElement);
-
 const initializeStatistics = () => {
-	let statistics = JSON.parse(localStorage.getItem('statistics'));
-	if (!statistics) {
-		let words = createInitialStorage();
-		statistics = localStorage.setItem('statistics', JSON.stringify(words));
-	}
+  let statistics = JSON.parse(localStorage.getItem('statistics'));
+  if (!statistics) {
+    let words = createInitialStorage();
+    statistics = localStorage.setItem('statistics', JSON.stringify(words));
+  }
 };
 
-initializeStatistics();
+const init = () => {
+  menuRender();
+  categoriesCardsRenderTrain();
+  categoriesCardsRenderPlay();
 
-statisticRender();
+  addClickOnToggle();
+
+  activateBurgerMenu();
+  addClickListenerOnMenu();
+  clickOnLogo();
+  initializeStatistics();
+
+  statisticRender();
+  document
+    .querySelector('.set-cards')
+    .addEventListener('click', getExpectedElement);
+};
+
+init();

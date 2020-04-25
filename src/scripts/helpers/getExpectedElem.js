@@ -14,6 +14,8 @@ export const getExpectedElement = (event) => {
   if (expectedElem) {
     const indexClickableCard = Number(expectedElem.getAttribute('id'));
     cardsWordsRenderTrain(indexClickableCard);
+    getCurrentTitle(expectedElem);
+    activeLinkMenuFromPage();
   }
 };
 
@@ -29,5 +31,25 @@ export const getClickedElement = (event) => {
   if (expectedElem) {
     const indexClickableCard = Number(expectedElem.getAttribute('id'));
     cardsWordsRenderPlay(indexClickableCard);
+    getCurrentTitle(expectedElem);
+    activeLinkMenuFromPage();
   }
+};
+
+export const getCurrentTitle = (expectedElem) => {
+  document.querySelector('.title').textContent = expectedElem.querySelector(
+    '.set-cards__title'
+  ).textContent;
+};
+
+const activeLinkMenuFromPage = () => {
+  document.querySelectorAll('.menu-link').forEach((active) => {
+    active.classList.remove('menu-link--active');
+
+    const title = document.querySelector('.title').textContent;
+    const menuEl = active.textContent;
+    if (title === menuEl) {
+      active.classList.add('menu-link--active');
+    }
+  });
 };
