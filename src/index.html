@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>English for kids</title>
+  </head>
+  <body>
+    <div class="backdrop"></div>
+    <header>
+      <div class="header container">
+        <div class="menu">
+          <a class="logo" href="/">English for kids</a>
+          <button class="menu__button-close">&times;</button>
+          <ul class="menu-list"></ul>
+        </div>
+        <nav class="navigation">
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="navigation__right-section">
+            <a class="statistic" href="/">Statistic</a>
+            <div class="on-off-toggle">
+              <input class="on-off-toggle__input" type="checkbox" id="toggle" />
+              <label for="toggle" class="on-off-toggle__slider"></label>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="popup container">
+        <button class="popup__button-close">&times;</button>
+        <div class="table-wrapper"></div>
+      </div>
+      <div class="main-wrapper container">
+        <span class="title"></span>
+        <div class="answers"></div>
+        <div class="set-cards"></div>
+        <div class="button-container"></div>
+      </div>
+      <div class="results container">
+        <div class="result__success">
+          <img src="./assets/icons/success.gif" alt="success" />
+          <div>
+            <img src="./assets/icons/balloon_green.png" alt="success-result" />
+            <p class="statistic-success-success"></p>
+          </div>
+          <div>
+            <img src="./assets/icons/balloon_red.png" alt="success-result" />
+            <p class="statistic-unsuccess-success"></p>
+          </div>
+          <button class="result__success__btn" type="button">
+            Go back to start a game
+          </button>
+        </div>
+        <div class="result__unsuccess">
+          <img src="./assets/icons/unsuccess.gif" alt="unsuccess" />
+          <div>
+            <img src="./assets/icons/balloon_green.png" alt="success-result" />
+            <p class="statistic-success-unsuccess"></p>
+          </div>
+          <div>
+            <img src="./assets/icons/balloon_red.png" alt="success-result" />
+            <p class="statistic-unsuccess-unsuccess"></p>
+          </div>
+          <button class="result__unsuccess__btn" type="button">
+            Go back to start a game
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

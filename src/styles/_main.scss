@@ -1,0 +1,358 @@
+@import '~sass-rem';
+@import './variables';
+
+// Cards with categories
+.set-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__img {
+    display: block;
+    width: rem(170px);
+    height: rem(170px);
+    margin: 0 auto;
+
+    border-radius: 50%;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: rem(320px);
+    height: rem(220px);
+    margin: rem(15px 25px);
+
+    color: $white;
+    background-clip: border-box;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+    border-radius: rem(8px);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: rem(0 10px 20px rgba(0, 0, 0, 0.4));
+      transition: 0.3s;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: rem(5px);
+    padding: rem(10px 0);
+
+    text-align: center;
+    border-bottom: rem(1px solid rgba(0, 0, 0, 0.1));
+  }
+}
+
+// Cards with words
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  &__container {
+    position: relative;
+    perspective: 1000px;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    transition: box-shadow 0.25s linear, transform 0.7s, -webkit-transform 0.7s;
+    transform-style: preserve-3d;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: rem(320px);
+    height: rem(220px);
+    margin: rem(15px 25px);
+
+    color: $white;
+    background-clip: border-box;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+    border-radius: rem(8px);
+
+    &--translate {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__img {
+    display: block;
+    width: rem(170px);
+    height: rem(170px);
+    margin: 0 auto;
+
+    border-radius: 50%;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+  }
+
+  &__turnover,
+  &__play {
+    position: absolute;
+    top: rem(3px);
+    width: rem(28px);
+    height: rem(30px);
+
+    background-repeat: no-repeat;
+    opacity: 1;
+
+    &__turnover:hover,
+    &__play:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__turnover {
+    left: rem(10px);
+    background-image: url('../assets/icons/arrow.svg');
+  }
+
+  &__play {
+    right: rem(10px);
+    background-image: url('../assets/icons/play.svg');
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    backface-visibility: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    background-color: $yellow;
+    background-clip: border-box;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+    border-radius: rem(8px);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: rem(0 10px 20px rgba(0, 0, 0, 0.4));
+      transition: 0.3s;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-bottom: rem(5px);
+    padding: rem(10px 0);
+
+    text-align: center;
+    border-bottom: rem(1px solid rgba(0, 0, 0, 0.1));
+  }
+
+  &__back {
+    color: white;
+    transform: rotateY(180deg);
+
+    background-color: $cyan;
+  }
+}
+
+// Cards play
+.play-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__img {
+    display: block;
+    width: rem(320px);
+    height: rem(220px);
+    margin: 0 auto;
+
+    border-radius: rem(8px);
+    border: rem(1px solid rgba(0, 0, 0, 0.5));
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: rem(320px);
+    height: rem(220px);
+    margin: rem(15px 25px);
+
+    background-color: $lightblue;
+    color: $white;
+    background-clip: border-box;
+    border: rem(1px solid rgba(0, 0, 0, 0.1));
+    border-radius: rem(8px);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: rem(0 10px 20px rgba(0, 0, 0, 0.4));
+      transition: 0.3s;
+    }
+  }
+}
+
+// Button Game
+.button-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & button {
+    margin: rem(10px);
+  }
+}
+
+.play__start-game,
+.play__listen,
+.result__success button,
+.result__unsuccess button {
+  width: rem(200px);
+  padding: rem(0 20px);
+
+  border: 0;
+  line-height: 2.5;
+  font-size: rem(16px);
+  text-align: center;
+  color: $white;
+  border-radius: rem(8px);
+  background-color: $secondary;
+  box-shadow: inset rem(2px 2px 3px rgba(255, 255, 255, 0.4)),
+    inset rem(-2px -2px 3px rgba(0, 0, 0, 0.4));
+
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: secondary;
+  }
+
+  &:active {
+    box-shadow: inset rem(-2px -2px 3px rgba(255, 255, 255, 0.4)),
+      inset rem(2px 2px 3px rgba(0, 0, 0, 0.4));
+  }
+}
+
+.play__listen {
+  display: none;
+
+  background-color: $lightblue;
+}
+
+.answers {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+  max-width: rem(1200px);
+  margin: rem(0 auto);
+  height: rem(65px);
+  overflow-x: hidden;
+
+  & img {
+    width: rem(60px);
+    height: rem(70px);
+  }
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.result__success,
+.result__unsuccess {
+  display: none;
+
+  flex-direction: column;
+  text-align: center;
+
+  & img {
+    margin-bottom: rem(50px);
+  }
+
+  & p {
+    font-size: rem(30px);
+  }
+
+  & div {
+    display: flex;
+  }
+
+  & button {
+    width: rem(250px);
+    background-color: $teal;
+  }
+}
+
+// Popup
+.popup {
+	display: none;
+	position: fixed;
+	top: 50%;
+  left: 50%;
+  height: 85vh;
+  overflow: scroll;
+
+	background-color: $white;
+	box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.7);
+  border-radius: rem(8px);
+  transform: translate(-50%, -50%);
+  
+  z-index: 20;
+
+	&__button-close {
+		position: absolute;
+		top: rem(20px);
+		right: rem(25px);
+
+		font-size: rem(40px);
+		font-weight: 700;
+		line-height: 1;
+
+		border: 0;
+		background-color: transparent;
+		color: $gray-500;
+		text-shadow: rem(0 1px 0 $white);
+		opacity: 0.5;
+		outline: none;
+
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+// Table
+caption {
+  padding: rem(15px);
+  font-size: rem(16px);
+  font-weight: 700;
+  color: $blue;
+}
